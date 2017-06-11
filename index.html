@@ -1,0 +1,44 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP Token</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" role="main">
+        <div class="jumbotron">
+            <h1>PHP Token</h1>
+            <p>Exemplo de uso do PHP Token</p>
+        </div>
+        <h1>Gerar Token</h1>
+        <form class="form-inline" id="form_gerar_token">
+            <div class="form-group">
+                <label for="gt_usuario">Usuário:</label>
+                <input type="text" class="form-control" id="gt_usuario">
+            </div>
+            <button type="submit" class="btn btn-default">Gerar Token</button>
+        </form>
+        <p><b>Resultado: </b><span id="rsl_gerar_token"></span></p>
+        <hr>
+        <h1>Checar Validade de token</h1>
+        <form class="form-inline" id="form_checar_validade">
+            <div class="form-group">
+                <label for="cv_usuario">Usuário:</label>
+                <input type="text" class="form-control" id="cv_usuario">
+            </div>
+            <div class="form-group">
+                <label for="cv_token">Token:</label>
+                <input type="text" class="form-control" id="cv_token">
+            </div>
+            <button type="submit" class="btn btn-default">Validar Token</button>
+        </form>
+        <p><b>Resultado: </b><span id="rsl_valida_token"></span></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
