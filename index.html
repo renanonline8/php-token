@@ -16,29 +16,46 @@
         <form class="form-inline" id="form_gerar_token">
             <div class="form-group">
                 <label for="gt_usuario">Usuário:</label>
-                <input type="text" class="form-control" id="gt_usuario">
+                <input type="text" class="form-control" id="gt_usuario" name="usuario">
             </div>
+            <input type="hidden" name="funcao" value="criarToken">
             <button type="submit" class="btn btn-default">Gerar Token</button>
+            <p class="msg_resposta"></p>
         </form>
-        <p><b>Resultado: </b><span id="rsl_gerar_token"></span></p>
         <hr>
         <h1>Checar Validade de token</h1>
         <form class="form-inline" id="form_checar_validade">
             <div class="form-group">
                 <label for="cv_usuario">Usuário:</label>
-                <input type="text" class="form-control" id="cv_usuario">
+                <input type="text" class="form-control" id="cv_usuario" name="usuario">
             </div>
             <div class="form-group">
                 <label for="cv_token">Token:</label>
-                <input type="text" class="form-control" id="cv_token">
+                <input type="text" class="form-control" id="cv_token" name="token">
             </div>
+            <input type="hidden" name="funcao" value="validarToken">
             <button type="submit" class="btn btn-default">Validar Token</button>
+            <p class="msg_resposta"></p>
         </form>
-        <p><b>Resultado: </b><span id="rsl_valida_token"></span></p>
+        <hr>
+        <h1>Cancelar tokens de usuários</h1>
+        <form class="form-inline" id="form_cancela_todos_tokens_usuario">
+            <div class="form-group">
+                <label for="cttu_usuario">Usuário:</label>
+                <input type="text" class="form-control" id="cttu_usuario" name="usuario">
+            </div>
+            <input type="hidden" name="funcao" value="destroiTodosTokenUsuario">
+            <button type="submit" class="btn btn-default">Cancela Tokens</button>
+            <p class="msg_resposta"></p>
+        </form>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        token.inicializar();
+    </script>
 </body>
 
 </html>

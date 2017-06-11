@@ -19,7 +19,8 @@ function iniciarToken(){
 
 function criarToken($usuario) {
     $iToken = iniciarToken();
-    $token = $iToken->generate($usuario);
+    $lifetime = 360;
+    $token = $iToken->generate($usuario, $lifetime);
     return $token;
 }
 
